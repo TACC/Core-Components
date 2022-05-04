@@ -7,8 +7,8 @@ The shared components for TACC WMA Workspace Portals & Websites
 
 ## Related Repositories
 
-- [Core Portal], the base Portal code for TACC WMA CMS Websites
-- [Core Styles], the custom UI pattern code for TACC WMA CMS Websites
+- [Core Portal], the base Portal code for TACC WMA Portals & Websites
+- [Core Styles], the custom UI pattern code for TACC WMA Portals & Websites
 
 
 ## External Project Usage
