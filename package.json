@@ -1,0 +1,21 @@
+{
+  "name": "@tacc/core-components",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "TACC ACI WMA <wma-portals@gmail.com>",
+  "description": "UI components for TACC Core-Portal and TAPIS UI.",
+  "files": [
+    "dist",
+    "source"
+  ],
+  "scripts": {
+    "build": "echo 'No build command yet'"
+  },
+  "engines": {
+    "node": ">=17.x",
+    "npm": ">=8.x"
+  },
+  "homepage": "https://github.com/TACC/Core-Components",
+  "repository": "git@github.com:TACC/Core-Components.git",
+  "dependencies": {}
+}
