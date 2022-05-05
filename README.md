@@ -2,7 +2,7 @@
 
 The shared components for TACC WMA Workspace Portals & Websites
 
-> __Notice__: This codebase is __not__ usable, yet.
+> __Notice__: This codebase is __not__ usable, yet. To test it, you may try the [`develop` branch](https://github.com/wesleyboar/Core-Components/tree/develop).
 
 
 ## Related Repositories
