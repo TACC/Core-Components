@@ -2,13 +2,13 @@
 
 The shared components for TACC WMA Workspace Portals & Websites
 
-> __Notice__: This codebase is __not__ usable, yet.
+> __Notice__: This codebase is __not__ usable, yet. To test it, you may try the [`develop` branch](https://github.com/wesleyboar/Core-Components/tree/develop).
 
 
 ## Related Repositories
 
-- [Core Portal], the base Portal code for TACC WMA CMS Websites
-- [Core Styles], the custom UI pattern code for TACC WMA CMS Websites
+- [Core Portal], the base Portal code for TACC WMA Portals & Websites
+- [Core Styles], the custom UI pattern code for TACC WMA Portals & Websites
 
 
 ## External Project Usage
