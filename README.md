@@ -3,7 +3,7 @@
 The shared components for TACC WMA Workspace Portals & Websites
 
 > [!IMPORTANT]
-> No code yet. Outdated docs. **Old** attempt: [`develop`](https://github.com/wesleyboar/Core-Components/tree/develop). **New** attempt: https://github.com/TACC/Core-Components/issues/1.
+> No code. Outdated docs. **Old** attempt: [`develop`](https://github.com/wesleyboar/Core-Components/tree/develop). **New** attempt: https://github.com/TACC/Core-Components/issues/1.
 
 
 ## Related Repositories
