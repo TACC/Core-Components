@@ -3,7 +3,9 @@
 The shared components for TACC WMA Workspace Portals & Websites
 
 > [!IMPORTANT]
-> No code. Outdated docs. **Old** attempt: [`develop`](https://github.com/wesleyboar/Core-Components/tree/develop). **New** attempt: https://github.com/TACC/Core-Components/issues/1.
+> No code. Outdated docs.
+> - **Old** attempt: [`develop`](https://github.com/wesleyboar/Core-Components/tree/develop).
+> - **New** attempt: https://github.com/TACC/Core-Components/issues/1
 
 
 ## Related Repositories
@@ -18,9 +20,10 @@ The shared components for TACC WMA Workspace Portals & Websites
     - `npm install TACC/Core-Components`
     - `yarn add TACC/Core-Components`
 
-2. Import components of either type:
-    - pre-transpiled, from `/dist`
-    - source files, from `/source`
+2. Import components e.g.:
+    - `…` (no example yet)
+    - `…` (no example yet)
+
 
 ## Local Development Setup
 
