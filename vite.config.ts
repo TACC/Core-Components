@@ -10,14 +10,14 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/core-components',
+  cacheDir: 'node_modules/.vite/core-components',
 
   plugins: [
     react(),
     dts(),
     libInjectCss(),
     viteTsConfigPaths({
-      root: '../../',
+      root: './',
     }),
   ],
 
@@ -40,8 +40,8 @@ export default defineConfig({
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
         glob
-          .sync(resolve(__dirname, 'src/**/!(*.test).{ts,tsx,js,jsx}'), {
-            ignore: resolve(__dirname, 'src/**/*.stories.tsx'),
+          .sync(resolve(__dirname, 's!(*.test).{ts,tsx,js,jsx}'), {
+            ignore: resolve(__dirname, 's*.stories.tsx'),
           })
           .map((file) => [
             // This removes `...src/` as well as the file extension from each
@@ -70,14 +70,14 @@ export default defineConfig({
   test: {
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/libs/core-components',
+      reportsDirectory: 'coverage',
       provider: 'v8',
     },
     globals: true,
     cache: {
-      dir: '../../node_modules/.vitest',
+      dir: 'node_modules/.vitest',
     },
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    include: ['s*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 });

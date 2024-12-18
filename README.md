@@ -73,13 +73,13 @@ The components are [React components](https://react.dev/learn) that should be [w
 1. Enter the Repository Clone:
 
    ```sh
-   cd tup-ui
+   cd Core-Components
    ```
 
 2. Install Dependencies:
 
    ```sh
-   npm install --include=optional --workspace=libs/core-components
+   npm install --include=optional
    ```
 
 3. Start demo:
