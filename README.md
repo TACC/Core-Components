@@ -1,87 +1,146 @@
-# TACC Core Components
+# TACC Core-Components
 
 The shared components for TACC WMA Workspace Portals & Websites
 
-> __Notice__: This codebase is __not__ usable, yet. To test it, you may try the [`develop` branch](https://github.com/wesleyboar/Core-Components/tree/develop).
+## Known Clients
 
+- [TUP UI], the client code for TACC User Portal
+- [Hazmapper], a TACC application for geospatial data
+
+[tup ui]: https://github.com/TACC/tup-ui
+[hazmapper]: https://github.com/TACC-Cloud/hazmapper
+
+## Table of Contents
+
+- [Related Repositories](#related-repositories)
+- [Project Architecture](#project-architecture)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Developing](#developing)
+- [Contributing](#contributing)
+- [Testing](#testing)
 
 ## Related Repositories
 
-- [Core Portal], the base Portal code for TACC WMA Portals & Websites
-- [Core Styles], the custom UI pattern code for TACC WMA Portals & Websites
+- [Core Styles], the shared UI pattern code for TACC WMA CMS Websites
 
+## Project Architecture
 
-## External Project Usage
+| directory | contents                     |
+| --------- | ---------------------------- |
+| `src/lib` | components, tests, [stories] |
 
-1. Install the package with any package manager e.g.:
-    - `npm install TACC/Core-Styles`
-    - `yarn add TACC/Core-Styles`
+## Prerequisites
 
-2. Import components of either type:
-    - pre-transpiled, from `/dist`
-    - source files, from `/source`
+- [Node.js]
 
-## Local Development Setup
+## Getting Started
 
-### Prequisites for Building the Components
+1. Install with any package manager e.g.
 
-* Nodejs 17.x
-* Typescript 4.x
+   - `npm install @tacc/core-styles`
+   - `yarn add @tacc/core-styles`
 
-### Code Configuration
+2. Import component(s) e.g.
 
-Code configuration happens in repos that use these styles.
+   ```ts
+   import { Button } from '@tacc/core-components';
+   ```
 
-### Source Files
+   ```ts
+   import {
+     FormikInput,
+     FormikTextarea,
+     FormikCheck,
+   } from '@tacc/core-components';
+   ```
 
-If you changes files in a `source/` directory, you may need to follow some of these steps.
+3. Use component(s)…
 
-#### Quick Start
+   > **Sorry.** Examples are limited and incomplete:
+   >
+   > - [TACC-Cloud/hazmapper#239](https://github.com/TACC-Cloud/hazmapper/pull/239/files)
+   > - [TACC/tup-ui#465](https://github.com/TACC/tup-ui/pull/465/files)
+   > - [TACC/tup-ui@ee5e73b:`/.../Button.stories.tsx`](https://github.com/TACC/tup-ui/blob/ee5e73b/libs/core-components/src/lib/Button/Button.stories.tsx#L26-L37)
 
-1. _(optional)_ Make changes to `/source` files.
-2. Transpile the styles: `npm run build`
-3. _(to debug)_ Review respective `/dist` files' content.
+## Developing
 
-## Testing
+The components are [React components](https://react.dev/learn) that should be [written in TypeScript](https://react.dev/learn/typescript#typescript-with-react-components).
 
-Plugin testing is done manually. Run `npm run build` from root folder in this project, then review output in `/dist/_tests.css`, to ensure plugins are working correctly.
+### Setup
 
-Style testing is done manually. Run `npm start` from root folder in this project, then review output at web interface, to ensure styles are rendering correctly.
+0. [Clone this Repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+1. Enter the Repository Clone:
 
-### Production Deployment
+   ```sh
+   cd tup-ui
+   ```
 
-The Core Components are not deployed alone.
+2. Install Dependencies:
 
-_For now_, the stylesheets are acquired or accessed by other repositories.
+   ```sh
+   npm install --include=optional --workspace=libs/core-components
+   ```
 
-| Repo | Usage |
-| - | - |
-| __[Core CMS]__ | [via CLI installed on test branch](https://github.com/TACC/Core-CMS/compare/test/core-styles) |
+3. Start demo:
 
+   ```sh
+   npx nx serve core-components
+   ```
+
+For more commands, see [Commands](#commands).
 
 ## Contributing
 
-### Development Workflow
+### to Components
 
-We use a modifed version of [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) as our development workflow. Our [development site](https://dev.cep.tacc.utexas.edu) (accessible behind the TACC Network) is always up-to-date with `main`, while the [production site](https://prod.cep.tacc.utexas.edu) is built to a hashed commit tag.
-- Feature branches contain major updates, bug fixes, and hot fixes with respective branch prefixes:
-    - `task/` for features and updates
-    - `bug/` for bugfixes
-    - `fix/` for hotfixes
+#### Minimum Viable Product
 
-### Best Practices
+0. Create or Improve a common component in a TACC repository e.g.
 
-Sign your commits ([see this link](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification) for help)
+   - https://github.com/TACC/tup-ui
+   - https://github.com/TACC/Core-Portal
+   - https://github.com/TACC-Cloud/hazmapper
 
-### Resources
+1. Put your work in a branch in this repository.
+2. Open a [Pull Request](https://github.com/TACC/tup-ui/pulls).
+3. [Test your work in a client repository.](#end-to-end-tests)
 
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+#### Complete Contribution
 
+4. [Create a story](https://storybook.js.org/docs/writing-stories) to demo the component.
+5. Create [unit tests](#unit-tests).
+
+### in the Demo
+
+| task               | reference                                         |
+| ------------------ | ------------------------------------------------- |
+| add/edit component | https://storybook.js.org/docs/writing-stories     |
+| change interaction | https://storybook.js.org/docs/essentials/controls |
+
+## Testing
+
+### Unit Tests
+
+Run `nx test core-components` to execute the unit tests via [Vitest](https://vitest.dev/).
+
+### End-to-End Tests
+
+Perform manually by installing and testing the components in a separate respository. See [different approaches to testing your own packages](https://dev.to/one-beyond/different-approaches-to-testing-your-own-packages-1kdg).
+
+## Resources
+
+### Commands
+
+| command                                  | task               | service                                |
+| ---------------------------------------- | ------------------ | -------------------------------------- |
+| `npx nx serve core-components`           | start demo         | [Storybook](https://storybook.js.org/) |
+| `npx nx build core-components`           | build components   | [Vite](https://vitejs.dev/)            |
+| `npx nx build-storybook core-components` | build demo         | [Storybook](https://storybook.js.org/) |
+| `npx nx test core-components`            | execute unit tests | [Vitest](https://vitest.dev/)          |
 
 <!-- Link Aliases -->
 
-[Core Portal Deployments]: https://github.com/TACC/Core-Portal-Deployments
-[Camino]: https://github.com/TACC/Camino
-[Core CMS]: https://github.com/TACC/Core-CMS
-[Core Portal]: https://github.com/TACC/Core-Portal
-[Core Styles]: https://github.com/TACC/Core-Styles
+[core styles]: https://github.com/TACC/Core-Styles
+[node.js]: https://nodejs.org/
+[stories]: https://storybook.js.org/docs/get-started/whats-a-story
