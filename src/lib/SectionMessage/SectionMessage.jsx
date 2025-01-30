@@ -9,7 +9,7 @@ import Message from '../Message';
  * <SectionMessage type="warning">Uh oh.</SectionMessage>
  * @see _common/Message
  */
-const SectionMessage = (props) => {
+const SectionMessage = ( props ) => {
   const [isVisible, setIsVisible] = useState(true);
   const autoManageVisible = props.canDismiss && props.isVisible === undefined;
   const autoManageDismiss = props.canDismiss && props.onDismiss === undefined;
@@ -41,10 +41,5 @@ const SectionMessage = (props) => {
   return <Message {...messageProps} />;
 };
 SectionMessage.propTypes = Message.propTypes;
-SectionMessage.defaultProps = {
-  ...Message.defaultProps,
-  isVisible: undefined,
-  onDismiss: undefined,
-};
 
 export default SectionMessage;

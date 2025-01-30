@@ -36,13 +36,13 @@ import styles from './SectionHeader.module.css';
  * <SectionHeader isForList>Name of List</SectionHeader>
  */
 function SectionHeader({
-  actions,
-  children,
-  className,
-  isForForm,
-  isForTable,
-  isForList,
-  isNestedHeader,
+  actions = '',
+  children = undefined,
+  className = '',
+  isForForm=  false,
+  isForTable = false,
+  isForList = false,
+  isNestedHeader = false,
 }) {
   let styleName = '';
   const styleNameList = [styles['root']];
@@ -80,14 +80,6 @@ SectionHeader.propTypes = {
   isForTable: PropTypes.bool,
   /** Whether this header is for a list */
   isForList: PropTypes.bool,
-};
-SectionHeader.defaultProps = {
-  actions: '',
-  className: '',
-  children: undefined,
-  isForForm: false,
-  isForTable: false,
-  isForList: false,
 };
 
 export default SectionHeader;
