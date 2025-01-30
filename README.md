@@ -85,7 +85,7 @@ The components are [React components](https://react.dev/learn) that should be [w
 3. Start demo:
 
    ```sh
-   npx nx serve core-components
+   npm start
    ```
 
 For more commands, see [Commands](#commands).
@@ -128,7 +128,7 @@ For more commands, see [Commands](#commands).
 
 ### Unit Tests
 
-Run `nx test core-components` to execute the unit tests via [Vitest](https://vitest.dev/).
+Run `npm test` to execute the unit tests via [Vitest](https://vitest.dev/).
 
 ### End-to-End Tests
 
@@ -140,10 +140,9 @@ Perform manually by installing and testing the components in a separate resposit
 
 | command                                  | task               | service                                |
 | ---------------------------------------- | ------------------ | -------------------------------------- |
-| `npx nx serve core-components`           | start demo         | [Storybook](https://storybook.js.org/) |
-| `npx nx build core-components`           | build components   | [Vite](https://vitejs.dev/)            |
-| `npx nx build-storybook core-components` | build demo         | [Storybook](https://storybook.js.org/) |
-| `npx nx test core-components`            | execute unit tests | [Vitest](https://vitest.dev/)          |
+| `npm run start`           | start demo         | [Storybook](https://storybook.js.org/) |
+| `npm run build`           | build components   | [Vite](https://vitejs.dev/)            |
+| `npm run test`            | execute unit tests | [Vitest](https://vitest.dev/)          |
 
 <!-- Link Aliases -->
 
