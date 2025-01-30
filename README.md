@@ -92,11 +92,17 @@ For more commands, see [Commands](#commands).
 
 ## Contributing
 
-### to Components
+### Fix a Component
+
+0. Fix it.
+1. Update story (as relevant).
+2. Update tests (as relevant).
+
+### Add a Component
 
 #### Minimum Viable Product
 
-0. Create or Improve a common component in a TACC repository e.g.
+0. Create or Improve a common component from a TACC repository e.g.
 
    - https://github.com/TACC/tup-ui
    - https://github.com/TACC/Core-Portal
