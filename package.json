@@ -1,21 +1,59 @@
 {
   "name": "@tacc/core-components",
-  "version": "0.0.0",
+  "version": "0.0.3-beta.1",
   "license": "MIT",
-  "author": "TACC ACI WMA <wma-portals@gmail.com>",
-  "description": "UI components for TACC Core-Portal and TAPIS UI.",
-  "files": [
-    "dist",
-    "source"
+  "author": "TACC ACI WMA <wma-portals@tacc.utexas.edu>",
+  "contributors": [
+    "TACC COA CMD <coa-cmd@tacc.utexas.edu>"
   ],
-  "scripts": {
-    "build": "echo 'No build command yet'"
-  },
-  "engines": {
-    "node": ">=17.x",
-    "npm": ">=8.x"
-  },
+  "description": "React component library for TACC applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/TACC/Core-Components",
-  "repository": "git@github.com:TACC/Core-Components.git",
-  "dependencies": {}
+  "scripts": {
+    "start": "storybook dev --port 9000",
+    "build": "vite build --outDir dist",
+    "// build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "uuid": "^8 || ^9"
+  },
+  "peerDependencies": {
+    "formik": "^2.2.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-resize-detector": "^7.1.2",
+    "react-router-dom": "^6.11.2",
+    "react-step-wizard": "^5.3.11",
+    "react-table": "^7.8.0",
+    "reactstrap": "^9.1.5"
+  },
+  "devDependencies": {
+    "@tacc/core-styles": "^2.25.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "jsdom": "^22.1.0",
+    "vite": "^5.0.11",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-lib-inject-css": "^2.1.1",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "0.34.6"
+  },
+  "sideEffects": [
+    "libs/core-componets/**/*.css"
+  ],
+  "optionalDependencies": {
+    "@storybook/addon-essentials": "^7.6.19",
+    "@storybook/core-server": "^7.6.19",
+    "@storybook/react-vite": "^7.6.19",
+    "storybook": "^7.6.19"
+  }
 }
