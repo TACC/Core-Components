@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 import './FormField.global.css';
 
 /** A limited-choice wrapper for `FormField` */
-const FormFieldWrapper = ({ children, type }) => {
+const FormFieldWrapper = ({ children, type = 'FormGroup' }) => {
   let wrapper;
 
   switch (type) {
@@ -35,9 +35,6 @@ FormFieldWrapper.propTypes = {
   /** Which wrapper to use */
   type: PropTypes.oneOf(['InputGroup', 'FormGroup', '']),
 };
-FormFieldWrapper.defaultProps = {
-  type: 'FormGroup',
-};
 
 /**
  * A standard form field that supports some customization and presets.
@@ -49,20 +46,21 @@ FormFieldWrapper.defaultProps = {
  * - Agave File Selector (requires `agaveFile` and `SelectModal`)
  */
 const FormField = ({
-  addon,
-  addonType,
-  label,
-  description,
-  required,
-  agaveFile,
-  SelectModal,
+  id = undefined,
+  name,
+  label = undefined,
+  description = undefined,
+  required = false,
+  agaveFile = undefined,
+  SelectModal = undefined,
+  addon = undefined,
+  addonType = undefined,
   ...props
 }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
   // which we can spread on <input> and also replace ErrorMessage entirely.
   const [field, meta, helpers] = useField(props);
   const [openAgaveFileModal, setOpenAgaveFileModal] = useState(false);
-  const { id, name } = props;
   const hasAddon = addon !== undefined;
   const wrapperType = hasAddon ? 'InputGroup' : '';
 
@@ -142,7 +140,7 @@ const FormField = ({
 };
 FormField.propTypes = {
   id: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   required: PropTypes.bool,
@@ -152,17 +150,6 @@ FormField.propTypes = {
   addon: PropTypes.node,
   /** The [`<InputGroupAddon>` `addonType`](https://reactstrap.github.io/components/input-group/) to add */
   addonType: PropTypes.oneOf(['prepend', 'append']),
-};
-FormField.defaultProps = {
-  id: undefined,
-  name: undefined,
-  label: undefined,
-  description: undefined,
-  required: false,
-  agaveFile: undefined,
-  SelectModal: undefined,
-  addon: undefined,
-  addonType: undefined,
 };
 
 export default FormField;

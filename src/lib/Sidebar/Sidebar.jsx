@@ -12,7 +12,7 @@ function isNotEmptyString(props, propName, componentName) {
   return null;
 }
 
-const SidebarItem = ({ to, iconName, label, children, disabled, hidden }) => {
+const SidebarItem = ({ to, iconName, label, children=null, disabled=false, hidden=false }) => {
   return (
     <NavItem>
       <NavLink
@@ -35,15 +35,10 @@ SidebarItem.propTypes = {
   label: isNotEmptyString,
   children: PropTypes.node,
   disabled: PropTypes.bool,
-  hidden: PropTypes.bool,
-};
-SidebarItem.defaultProps = {
-  children: null,
-  disabled: false,
-  hidden: false,
 };
 
-const Sidebar = ({ sidebarItems, addItems, loading }) => {
+
+const Sidebar = ({ sidebarItems, addItems=[], loading=false }) => {
   return (
     <Nav className={styles['root']} vertical>
       {!loading &&
@@ -76,10 +71,6 @@ Sidebar.propTypes = {
   sidebarItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   addItems: PropTypes.arrayOf(PropTypes.object),
   loading: PropTypes.bool,
-};
-Sidebar.defaultProps = {
-  addItems: [],
-  loading: false,
 };
 
 export default Sidebar;

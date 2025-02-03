@@ -7,7 +7,7 @@ import Button from '../Button';
 
 import styles from './ShowMore.module.css';
 
-const ShowMore = ({ className, children }) => {
+const ShowMore = ({ className='', children }) => {
   const [expanded, setExpanded] = useState(false);
 
   const toggleCallback = useCallback(() => {
@@ -43,10 +43,6 @@ const ShowMore = ({ className, children }) => {
 ShowMore.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-};
-
-ShowMore.defaultProps = {
-  className: '',
 };
 
 export default ShowMore;
