@@ -79,19 +79,19 @@ import styles from './Section.module.css';
  * />
  */
 function Section({
-  bodyClassName,
-  children,
-  className,
-  content,
-  contentClassName,
-  contentLayoutName,
-  contentShouldScroll,
-  header,
-  headerActions,
-  headerClassName,
-  manualContent,
-  manualHeader,
-  messages,
+  bodyClassName= '',
+  children= undefined,
+  className= '',
+  content= '',
+  contentClassName= '',
+  contentLayoutName= DEFAULT_LAYOUT,
+  contentShouldScroll= false,
+  header= '',
+  headerActions= '',
+  headerClassName= '',
+  manualContent= undefined,
+  manualHeader= undefined,
+  messages= '',
 }) {
   const shouldBuildHeader = header || headerClassName || headerActions;
 
@@ -179,22 +179,6 @@ Section.propTypes = {
   /** Any message(s) (e.g. <Message>) (but NOT a intro message) */
   messages: PropTypes.node,
 };
-Section.defaultProps = {
-  bodyClassName: '',
-  children: undefined,
-  className: '',
-  content: '',
-  contentClassName: '',
-  contentLayoutName: DEFAULT_LAYOUT,
-  contentShouldScroll: false,
-  header: '',
-  headerActions: '',
-  headerClassName: '',
-  manualContent: undefined,
-  manualHeader: undefined,
-  messages: '',
-  introMessageName: '',
-  introMessageText: '',
-};
+
 
 export default Section;
