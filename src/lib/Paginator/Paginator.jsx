@@ -26,7 +26,12 @@ PaginatorPage.propTypes = {
   current: PropTypes.number.isRequired,
 };
 
-const Paginator = ({ pages, current, callback, spread = 11,
+const Paginator = ({
+  pages,
+  current,
+  callback,
+  spread = 11,
+  className = '',
 }) => {
   let start, end;
   if (pages === 1 || pages === 2) {
@@ -54,7 +59,7 @@ const Paginator = ({ pages, current, callback, spread = 11,
           .map((_, index) => start + index)
       : [];
   return (
-    <nav className={styles.root}>
+    <nav className={`${styles.root} ${className}`.trim()}>
       <Button
         type="link"
         className={styles.endcap}
@@ -96,6 +101,7 @@ Paginator.propTypes = {
   current: PropTypes.number.isRequired,
   callback: PropTypes.func.isRequired,
   spread: PropTypes.number, // Number of page buttons to show
+  className: PropTypes.string,
 };
 
 export default Paginator;
