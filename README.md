@@ -19,6 +19,7 @@ The shared components for TACC WMA Workspace Portals & Websites
 - [Developing](#developing)
 - [Contributing](#contributing)
 - [Testing](#testing)
+- [Other Libraries](#other-libraries)
 
 ## Related Repositories
 
@@ -143,6 +144,10 @@ Perform manually by installing and testing the components in a separate resposit
 | `npm run start`           | start demo         | [Storybook](https://storybook.js.org/) |
 | `npm run build`           | build components   | [Vite](https://vitejs.dev/)            |
 | `npm run test`            | execute unit tests | [Vitest](https://vitest.dev/)          |
+
+## Other Libraries
+
+See [Other Libraries](docs/other-libraries.md) that TACC developers use with Core-Components.
 
 <!-- Link Aliases -->
 
