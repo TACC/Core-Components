@@ -142,6 +142,7 @@ Perform manually by installing and testing the components in a separate resposit
 | - | - | - |
 | `npm run start` | start demo | [Storybook](https://storybook.js.org/) |
 | `npm run build` | build components | [Vite](https://vitejs.dev/) |
+| `npm run build-demo` | build demo | [Storybook](https://storybook.js.org/) |
 | `npm run test` | execute unit tests | [Vitest](https://vitest.dev/) |
 
 <!-- Link Aliases -->
