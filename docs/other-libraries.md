@@ -26,7 +26,7 @@
 | [Bootstrap](https://getbootstrap.com/) | popular CSS framework, but dissatisfying long-term[^0] |
 | [TACC/Core-Styles](https://github.com/TACC/Core-Styles) | TACC's internal design system and UI components[^1]  |
 
-<sup>We are considering [ShadCN](https://ui.shadcn.com/).</sup>
+<sup>We are considering [ShadCN](https://ui.shadcn.com/) as a way of offloading the work of designing the props interface for the widgets we nee.</sup>
 
 [^0]: Not recommended, but already pervasive enough that we must support it.
 [^1]: Used directly in some TACC web UI, but will become an internal system for skinning third-party libraries like Bootstrap and Ant.
