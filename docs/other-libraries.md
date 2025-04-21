@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Recommended](#recommended)
+- [Recommended or Familiar](#recommended-or-familiar)
   - [Styling](#styling)
   - [Core Application Features](#core-application-features)
   - [Data Handling & Visualization](#data-handling--visualization)
@@ -10,20 +10,26 @@
   - [Deployment](#deployment)
 - [Not Recommended](#not-recommended)
 
-## Recommended
+## Recommended or Familiar
 
 > [!TIP]
-> TACC developers had good exprience using these libraries, or are common enough that we support them.
+> TACC developers had good exprience using some of these libraries.
+
+> [!NOTE]
+> Some libraries are here **only** because they are common enough that we must support them.
 
 ### Styling
 
-| Library | Purpose |
+| Library | Evaluation |
 | - | - |
-| Ant Design | enterprise-level UI framework with comprehensive React components |
-| Bootstrap | industry-standard CSS framework with extensive component library |
-| TACC/Core-Styles[^1] | TACC-specific design system and UI components |
+| [Ant Design](https://ant.design/) | newer UI framework with comprehensive React components |
+| [Bootstrap](https://getbootstrap.com/) | popular CSS framework, but dissatisfying long-term[^0] |
+| [TACC/Core-Styles](https://github.com/TACC/Core-Styles) | TACC's internal design system and UI components[^1]  |
 
-[^1]: TACC/Core-Styles is a library of components and styles that are used in TACC applications. It will become an internal system for skinning third-party libraries like Bootstrap and Ant.
+<sup>We are considering [ShadCN](https://ui.shadcn.com/).</sup>
+
+[^0]: Not recommended, but already pervasive enough that we must support it.
+[^1]: Used directly in some TACC web UI, but will become an internal system for skinning third-party libraries like Bootstrap and Ant.
 
 ### Core Application Features
 
@@ -41,7 +47,7 @@
 | `react-virtualized`[^2] | virtualize large data tables |
 | `react-window`[^2] | transforms memory-intensive components into performant ones |
 
-[^2]: These couple well together.
+[^2]: These work well together.
 
 ### Build Tools
 
@@ -57,7 +63,9 @@
 
 ## Not Recommended
 
-> [!DANGER]
+> [!CAUTION]
 > TACC developers had poor exprience using these libraries. We currently do not recommend them.
 
+| Library | Purpose |
+| - | - |
 | Chakra UI | Not very intuitive to use, docs are incomplete and the links between the different versions are confusing
