@@ -15,6 +15,7 @@
   "homepage": "https://github.com/TACC/Core-Components",
   "scripts": {
     "start": "storybook dev --port 9000",
+    "build-demo": "storybook build --output-dir demo",
     "build": "vite build --outDir dist",
     "// build": "tsc -b && vite build",
     "lint": "eslint .",
