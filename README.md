@@ -139,11 +139,11 @@ Perform manually by installing and testing the components in a separate resposit
 
 ### Commands
 
-| command                                  | task               | service                                |
-| ---------------------------------------- | ------------------ | -------------------------------------- |
-| `npm run start`           | start demo         | [Storybook](https://storybook.js.org/) |
-| `npm run build`           | build components   | [Vite](https://vitejs.dev/)            |
-| `npm run test`            | execute unit tests | [Vitest](https://vitest.dev/)          |
+| command | task | service |
+| - | - | - |
+| `npm run start` | start demo | [Storybook](https://storybook.js.org/) |
+| `npm run build` | build components | [Vite](https://vitejs.dev/) |
+| `npm run test` | execute unit tests | [Vitest](https://vitest.dev/) |
 
 ## Other Libraries
 
