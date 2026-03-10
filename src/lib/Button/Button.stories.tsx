@@ -11,6 +11,10 @@ const meta: Meta<typeof Button> = {
       options: Object.keys(SIZE_MAP),
       control: { type: 'inline-radio' },
     },
+    title: {
+      control: 'text',
+      description: 'HTML title attribute (via ...rest)',
+    },
   },
 };
 export default meta;
@@ -40,5 +44,17 @@ export const Types: Story = {
   },
   args: {
     className: styles['button'] + ' ',
+  },
+};
+
+export const HTMLAttributes: Story = {
+  render: (args) => (
+    <Button type="primary" {...args}>
+      Hover me for title tooltip
+    </Button>
+  ),
+  args: {
+    title: 'Hello from rest',
+    'aria-label': 'Example button with HTML attributes',
   },
 };
