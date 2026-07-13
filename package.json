@@ -16,6 +16,13 @@
     "dist"
   ],
   "homepage": "https://github.com/TACC/Core-Components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TACC/Core-Components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TACC/Core-Components/issues"
+  },
   "scripts": {
     "start": "storybook dev --port 9000",
     "build-demo": "storybook build --output-dir demo",
